@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speech Recognition</title>
-</head>
-<body>
-    <div class="text-container">
-        <span id="final-text"></span>
-        <span id="interim-text"></span>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/dist/output.css" rel="stylesheet">
+        <title>Speech Recognition</title>
+    </head>
+    <body class="bg-primary font-sans">
+        <div class="flex flex-col justify-center items-center w-full h-full text-white">
+            <div class="w-4/6 md:w-3/6 mx-auto px-4 py-6 bg-primary border border-gray-500 rounded-lg shadow-lg">
+                <h1 class="text-lg font-bold text-center mb-4">Speech Recognition with Javascript</h1>
+                <p class="pb-3 font-semibold text-lg">Transcript</p>
+                <div class="relative">
+                    <div class="w-full h-72 bg-gray-700 border border-gray-500 rounded-lg py-2 px-4 mb-4">
+                        <span class="text-white" id="final-result"></span>
+                        <span class="text-gray-500" id="interim-result"></span>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-5 justify-evenly items-center">
+                    <button onclick="handleSpeachRecogtiniton()" id="start" class="bg-green-500 hover:bg-green-700 transition ease duration-300 p-2 rounded-md px-12">Start</button>
+                    <div>
+                        <p class="font-semibold pb-2">Select Language</p>
+                        <select class="text-black" id="language-select"></select>
+                        <select class="text-black" id="dialect-select"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
     <script src="main.js"></script>
-</body>
+    <script src="languages.js"></script>
+    </body>
 </html>
